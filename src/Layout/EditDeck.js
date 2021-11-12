@@ -5,7 +5,7 @@ import { updateDeck, readDeck } from "../utils/api/index.js";
 function EditDeck({setTrigger, trigger, deck}){
     const history = useHistory();
 
-    const [formData, setFormData] = useState({});
+    const [formData, setFormData] = useState({id:null,name:"",description:""});
     useEffect(() => {
         async function getCard(){
             const response = await readDeck(deck.id);

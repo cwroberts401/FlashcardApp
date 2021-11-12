@@ -28,7 +28,7 @@ return (
     <>
         <form onSubmit={handleSubmit}>
         <h2>{`Add Card`}</h2>
-        <div class="mb-3">
+        <div className="mb-3">
             <label htmlFor="front" className="form-label">Front</label>
             <textarea className="form-control" id="front" name="front" rows="3" onChange={handleChange} value={formData.front}></textarea>
         </div>

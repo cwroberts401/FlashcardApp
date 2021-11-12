@@ -40,11 +40,11 @@ function NewDeck({setTrigger, trigger}){
         </nav>
         <form onSubmit={handleSubmit}>
         <h2>Create Deck</h2>
-        <div class="mb-3">
+        <div className="mb-3">
             <label htmlFor="name" className="form-label">Name</label>
             <input type="text" className="form-control" id="name" name="name" onChange={handleChange} value={formData.name}/>
         </div>
-        <div class="mb-3">
+        <div className="mb-3">
             <label htmlFor="description" className="form-label">Description</label>
             <textarea className="form-control" id="description" name="description" rows="3" onChange={handleChange} value={formData.description}></textarea>
         </div>
