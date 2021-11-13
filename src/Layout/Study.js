@@ -24,14 +24,18 @@ function Study({decks}) {
             setCardText(response.cards[int].front)}}
             findDeck()      
         }, [deckId, int]);
-        console.log(deck)
 
-    function nextCard() {
-        setInt(int+1);
-        setCardText(cards[int].front);
-        setCardFront(true);
+
+
+    function flipCard() {
+        cardFront? setCardText(cards[int].back) : setCardText(cards[int].front);
+        setCardFront(!cardFront);
     }
     
+    function nextCard() {
+        setInt(int+1);
+        flipCard();
+    }
     
 
     
@@ -41,8 +45,8 @@ function Study({decks}) {
         <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
                 <li className="breadcrumb-item"><Link to="/"><FontAwesomeIcon icon={faHome} /> Home</Link></li>
-                <li className="breadcrumb-item"><Link to="/">Library</Link></li>
-                <li className="breadcrumb-item active" aria-current="page">Data</li>
+                <li className="breadcrumb-item"><Link to={`/decks/${deck.id}`}>Deck</Link></li>
+                <li className="breadcrumb-item active" aria-current="page">Study</li>
             </ol>
         </nav>
         <h3>{`${deck.name}`}</h3>
@@ -50,7 +54,7 @@ function Study({decks}) {
         <div className="card-body">
         <h5 className="card-title">{`Card ${int+1} of ${cards.length}`}</h5>
         <p className="card-text">{cardText}</p>
-        <button className="btn btn-secondary" type="button" onClick={() => cardFront? (setCardText(cards[int].back), setCardFront(false)):(setCardText(cards[int].front), setCardFront(true))}>Flip</button>
+        <button className="btn btn-secondary" type="button" onClick={() => flipCard()}>Flip</button>
         {cardFront? null : <button className="btn btn-primary" type="button" onClick={() => (int+1) < cards.length? nextCard():window.confirm("Reset Deck? Cancel will bring you to homepage")?(setInt(0),setCardFront(true)):history.push("/")}>Next</button>}
         </div>
         </div>
@@ -60,8 +64,8 @@ function Study({decks}) {
          <nav aria-label="breadcrumb">
              <ol className="breadcrumb">
                  <li className="breadcrumb-item"><Link to="/"><FontAwesomeIcon icon={faHome} /> Home</Link></li>
-                 <li className="breadcrumb-item"><Link to="/">Library</Link></li>
-                 <li className="breadcrumb-item active" aria-current="page">Data</li>
+                 <li className="breadcrumb-item"><Link to={`/decks/${deck.id}`}>Deck</Link></li>
+                 <li className="breadcrumb-item active" aria-current="page">Study</li>
              </ol>
          </nav>
          <h3>{`${deck.name}`}</h3>

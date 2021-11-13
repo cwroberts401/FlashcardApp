@@ -5,7 +5,6 @@ import { faHome, faBook, faPlus, faTrashAlt, faEye } from '@fortawesome/free-sol
 import { readDeck, deleteDeck, deleteCard } from "../utils/api/index.js";
 import EditDeck from "./EditDeck";
 import EditCard from "./EditCard";
-import NewCard from "./NewCard";
 
 function View ({trigger, setTrigger}) {
 
@@ -38,6 +37,10 @@ function View ({trigger, setTrigger}) {
                         <li className="breadcrumb-item"><Link to={`/decks/${deck.id}`}>{deck.name}</Link></li>
                         <li className="breadcrumb-item active" aria-current="page">Add New Card</li>
                     </Route>
+                    <Route path="/decks/:deckId/cards/:cardId/edit">
+                        <li className="breadcrumb-item"><Link to={`/decks/${deck.id}`}>{deck.name}</Link></li>
+                        <li className="breadcrumb-item active" aria-current="page">Edit Card</li>
+                    </Route>
                     <Route path="/decks/:deckId">
                         <li className="breadcrumb-item active" aria-current="page">{deck.name}</li>
                     </Route>
@@ -49,7 +52,7 @@ function View ({trigger, setTrigger}) {
                 <EditDeck deck={deck} trigger={trigger} setTrigger={setTrigger}/>
             </Route>
             <Route path="/decks/:deckId/cards/new">
-                <NewCard deck={deck} trigger={trigger} setTrigger={setTrigger}/>
+                <EditCard deck={deck} trigger={trigger} setTrigger={setTrigger}/>
             </Route>
             <Route path="/decks/:deckId/cards/:cardId/edit">
                 <EditCard setTrigger={setTrigger} trigger={trigger} deck={deck} cards={cards}/>

@@ -67,7 +67,7 @@
     {
       "id": 9,
       "front": "fkls;dfa edited 2dd",
-      "back": "fskajf yes 2",
+      "back": "fskajf yes 22ddd",
       "deckId": 3
     },
     {
@@ -86,6 +86,36 @@
       "id": 12,
       "front": "this is a new one",
       "back": "added",
+      "deckId": 3
+    },
+    {
+      "id": 13,
+      "front": "smokey edited ",
+      "back": "test",
+      "deckId": 3
+    },
+    {
+      "id": 14,
+      "front": "added",
+      "back": "yay",
+      "deckId": 3
+    },
+    {
+      "id": 15,
+      "front": "terstets",
+      "back": "resrsrs",
+      "deckId": 3
+    },
+    {
+      "id": 16,
+      "front": "yayayaa",
+      "back": "boooooooo",
+      "deckId": 3
+    },
+    {
+      "id": 17,
+      "front": "wooooooooo",
+      "back": "zoooooop",
       "deckId": 3
     }
   ]
