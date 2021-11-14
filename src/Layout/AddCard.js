@@ -1,6 +1,6 @@
 import React from "react";
 
-function AddCard({setTrigger, trigger, deck}){
+function AddCard({ deck }){
     const history = useHistory();
     const initialFormState = {
         id: "",
@@ -18,7 +18,6 @@ function AddCard({setTrigger, trigger, deck}){
       const handleSubmit = async (event) => {
         event.preventDefault();
         const response = await updateDeck(formData);
-        setTrigger(trigger + 1);
         console.log("Updated:", formData);
         history.push(`/decks/${deck.id}`);    
       };

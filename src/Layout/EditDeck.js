@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import {Link, useHistory} from "react-router-dom";
 import { updateDeck, readDeck } from "../utils/api/index.js";
 
-function EditDeck({setTrigger, trigger, deck}){
+function EditDeck({ deck }){
     const history = useHistory();
 
     const [formData, setFormData] = useState({id:null,name:"",description:""});
@@ -25,7 +25,6 @@ function EditDeck({setTrigger, trigger, deck}){
     const handleSubmit = async (event) => {
         event.preventDefault();
         await updateDeck(formData);
-        setTrigger(trigger + 1);
         history.push(`/decks/${deck.id}`);    
     };
 

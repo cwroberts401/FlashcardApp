@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { readDeck } from "../utils/api/index.js";
 
-function Study({decks}) {
+function Study() {
 
     const [deck, setDeck] = useState({})
     const params = useParams();

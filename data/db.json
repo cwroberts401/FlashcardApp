@@ -17,13 +17,13 @@
     },
     {
       "id": 4,
-      "name": "again",
-      "description": "test it"
+      "name": "a new deck",
+      "description": "hererer"
     },
     {
       "id": 5,
-      "name": "fd edit",
-      "description": "fdsa edit"
+      "name": "new deck",
+      "description": "test 2"
     }
   ],
   "cards": [
@@ -117,6 +117,12 @@
       "front": "wooooooooo",
       "back": "zoooooop",
       "deckId": 3
+    },
+    {
+      "id": 18,
+      "front": "test acrd",
+      "back": "testinh",
+      "deckId": 4
     }
   ]
 }

@@ -5,12 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 
-function Home ({decks, trigger, setTrigger}) {
+function Home ({ decks }) {
 
     return (
         <>
             <Link to="/decks/new"className="btn btn-secondary"><FontAwesomeIcon icon={faPlus} /> Create Deck </Link>           
-            <Deck decks={decks} trigger={trigger} setTrigger={setTrigger}/>
+            <Deck decks={decks}/>
         </>
 
     )

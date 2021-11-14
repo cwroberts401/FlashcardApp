@@ -5,7 +5,7 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { createDeck } from "../utils/api/index.js";
 
 
-function NewDeck({setTrigger, trigger}){
+function NewDeck(){
     const history = useHistory();
     const initialFormState = {
         id: "",
@@ -23,7 +23,6 @@ function NewDeck({setTrigger, trigger}){
       const handleSubmit = async (event) => {
         event.preventDefault();
         const response = await createDeck(formData);
-        setTrigger(trigger + 1);
         console.log("Submitted:", formData);
         history.push(`/decks/${response.id}`) 
    

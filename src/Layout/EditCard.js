@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useHistory, useParams } from "react-router-dom";
 import { readCard, updateCard, createCard } from "../utils/api/index.js";
 
-function EditCard({setTrigger, trigger, deck, cards}){
+function EditCard({ deck }){
     const history = useHistory();
     const params = useParams();
     const cardId = params.cardId;
@@ -33,8 +33,9 @@ function EditCard({setTrigger, trigger, deck, cards}){
         } else {
         await createCard(deck.id, formData);
         setFormData(initialState);
+        history.push(`/decks/${deck.id}/cards/new`)
         };
-        setTrigger(trigger +1);
+
         
       };
 
