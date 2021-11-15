@@ -123,6 +123,12 @@
       "front": "test acrd",
       "back": "testinh",
       "deckId": 4
+    },
+    {
+      "id": 19,
+      "front": "test this edited",
+      "back": "addedd edited",
+      "deckId": 4
     }
   ]
 }
