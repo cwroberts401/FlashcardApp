@@ -56,7 +56,7 @@ function View () {
                 <EditCard deck={deck}/>
             </Route>
             <Route path="/decks/:deckId/cards/:cardId/edit">
-                <EditCard deck={deck} cards={cards}/>
+                <EditCard deck={deck}/>
             </Route>
             <Route path="/decks/:deckId">
             <h4>{deck.name}</h4>
