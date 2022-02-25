@@ -6,9 +6,13 @@ This study app allows users to create decks of flashcards and then go through th
 
 
 ## Features
-### Decks
-![](https://github.com/cwroberts401/FlashcardApp/blob/main/Screen%20Shot%202022-02-25%20at%205.24.02%20PM.png)
+### Homepage
+![](https://github.com/cwroberts401/FlashcardApp/blob/main/Screen%20Shot%202022-02-25%20at%205.22.39%20PM.png)
 This is the main page, here all the user created decks are dispayed. From this page the user can select a deck to study from, add a card to an existing deck, or create a new deck.
+
+### Deck
+![](https://github.com/cwroberts401/FlashcardApp/blob/main/Screen%20Shot%202022-02-25%20at%205.22.58%20PM.png)
+This page shows all the cards in the deck, from here the user can add a card or start studying from the selected deck.
 
 ### Study
 ![](https://github.com/cwroberts401/FlashcardApp/blob/main/Screen%20Shot%202022-02-25%20at%205.23.32%20PM.png)
@@ -17,6 +21,10 @@ Once a deck is selected from the decks page, the front of the first card is disp
 ### New Deck
 ![](https://github.com/cwroberts401/FlashcardApp/blob/main/Screen%20Shot%202022-02-25%20at%205.24.02%20PM.png)
 Here the user creates a new deck, you can create the title and then add as many cards as you want.
+
+### New/Edit Card
+![](https://github.com/cwroberts401/FlashcardApp/blob/main/Screen%20Shot%202022-02-25%20at%205.23.52%20PM.png)
+Here the user can create a new card by adding text to the front and back or can edit an alredy existing card, if editing, the exisitng card data is populated by default.
 
 
 
